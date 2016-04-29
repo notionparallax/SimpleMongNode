@@ -8,7 +8,9 @@ Do this tutorial up until the 'Provision a database' step
 
 https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
 
-The following steps are from here:https://devcenter.heroku.com/articles/mongolab#adding-mlab-as-a-heroku-add-on
+_except_ in **Prepare the app** when it asks you to clone the repo, clone this repo instead.
+
+The following steps are from [here](https://devcenter.heroku.com/articles/mongolab#adding-mlab-as-a-heroku-add-on):
 
 add a new database:
 
