@@ -27,7 +27,13 @@ At the bottom of your `index.js` change this line to be yout URI (i.e. not mine)
 
 Then git commit and `git push heroku master`
 
-There are two useful routes. I've used URL params to make it easier to test. 
+Your app _should_ be working now!
+
+---
+
+A route is the bit after the first `/` that tells the app what page to go to, or in our case, what do do with the data we're going to flick at it.
+
+In `index.js` There are two useful routes. I've used URL params to make it easier to test. 
 
 The first is `/in-url-params` which takes two params `rssi` and `base`.  What these words are isn't really important. Just think of them as some things that you are sending to the server. It could be anything eventualy. You'd use this like this:
 
