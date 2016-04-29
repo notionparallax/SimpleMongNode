@@ -20,7 +20,7 @@ Then find it's connection uri:
 
     $  heroku config | grep MONGODB_URI
 
-Add this to the bottom of your `index.js`:
+At the bottom of your `index.js` change this line to be yout URI (i.e. not mine):
 
     // Connect to Mongo on start
     var mongoURL = 'mongodb://heroku_d58bh1wm:m3f37fh3q0sodg1lct1vbb97s0@ds063899.mlab.com:63899/heroku_d58bh1wm'; // <-- but put in YOUR one from the step above
