@@ -3,6 +3,11 @@ var express = require('express')
 
 var db = require('./db')
 
+//simple route
+router.get('/test', function(req, res){
+  console.log('the test route worked');
+});
+
 //assuming a url that looks like /in-url-params?rssi=50&base=home
 router.get('/in-url-params', function(req, res) {
   console.log("Just received a request of:", req);
