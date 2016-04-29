@@ -17,6 +17,9 @@ router.get('/in-url-params', function(req, res) {
   var collection = db.get().collection('beaconData')
   db.collection('beaconData').insert({rssi: rssi, base: base});
 
+  res.type('text/plain');
+  res.send("rssi: " + rssi + "| base: " + base);
+
   // collection.find().toArray(function(err, docs) {
   //   res.render('beaconData', {comments: docs})
   // })
