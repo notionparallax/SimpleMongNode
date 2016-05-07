@@ -1,10 +1,12 @@
-var db = require('./db')
+var db = require('./db');
+var bodyParser = require('body-parser')
 var express = require('express');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json())
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -32,6 +34,17 @@ app.get('/in-url-params', function(req, res) {
 
   var collection = db.get().collection('beaconData')
   collection.insert({rssi: rssi, base: base},
+    function(err, result){
+      console.log('that seemed to work', result);
+      res.send(result);
+    });
+});
+
+app.post('/in-json', function(req, res) {
+  console.log(req.body);
+
+  var collection = db.get().collection('beaconData')
+  collection.insert(req.body, //req.body is already JSON
     function(err, result){
       console.log('that seemed to work', result);
       res.send(result);
